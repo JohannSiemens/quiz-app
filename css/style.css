@@ -6,14 +6,30 @@ header {
   border: black 10px solid;
 }
 
-footer {
-  width: 100%;
-  _position: fixed;
-  text-align: center;
-  background-color: red;
-  border: black 10px solid;
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
 }
 
 .card {
   border: black 10px solid;
+  width: 80%;
+  margin: 15px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  height: 25px;
+  border: black 10px solid;
+}
+
+li {
+  width: 10em;
+  height: 10em;
 }

@@ -7,6 +7,13 @@ header {
   right: 0;
 }
 
+h1 {
+  font-size: 60px;
+  padding: 0 0 0 0;
+  margin: 15px 0 15px 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -29,9 +36,16 @@ footer {
 
 .card {
   border: black 10px solid;
-  width: 80%;
+  width: 70%;
   margin: 15px;
   position: relative;
+  text-align: center;
+  height: 200px;
+}
+
+.card h2 {
+  font-size: 40px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .card-bookmark {
@@ -53,4 +67,9 @@ ul {
 li {
   width: 10em;
   height: 10em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }

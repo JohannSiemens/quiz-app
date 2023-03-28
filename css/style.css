@@ -99,7 +99,7 @@ a:active {
   text-decoration: underline;
 }
 
-.active-page {
+.item__active-page {
   background-color: #95b9c7;
   text-decoration: underline;
 }

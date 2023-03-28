@@ -16,8 +16,8 @@ body {
 }
 
 footer {
-  height: 70px;
-  border: black 10px solid;
+  height: 60px;
+  border: black 5px solid;
   width: 100%;
   background-color: #123456;
   position: fixed;
@@ -26,9 +26,9 @@ footer {
   right: 0;
 }
 
-h1 {
+.header__h1 {
   height: 125px;
-  border: black 10px solid;
+  border: black 5px solid;
   width: 100%;
   font-size: 5rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -36,6 +36,26 @@ h1 {
   background-color: #123456;
   text-align: center;
   margin: auto;
+}
+
+.footer__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  margin: 1px 0 10px;
+}
+
+.menu__item {
+  width: 10em;
+  height: 10em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.card__answer,
+.card__tag {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .card {
@@ -50,36 +70,17 @@ h1 {
   color: white;
 }
 
-.card h2 {
-  font-size: 40px;
+.card__question {
+  font-size: 2.5rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.card_bookmark {
+.question__bookmark {
   height: 50px;
   width: 25px;
   position: absolute;
   right: 20px;
   top: -15px;
-}
-
-ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  list-style: none;
-  margin: 1px 0 10px;
-}
-
-li {
-  width: 10em;
-  height: 10em;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
-button {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 a:link,

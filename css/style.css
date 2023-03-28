@@ -1,18 +1,21 @@
-header {
-  width: 100%;
-  text-align: center;
-  background-color: #123456;
-  border: black 10px solid;
-  left: 0;
-  right: 0;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
 }
 
 h1 {
-  font-size: 60px;
-  padding: 0 0 0 0;
-  margin: 15px 0 15px 0;
+  height: 125px;
+  border: black 10px solid;
+  width: 100%;
+  font-size: 5rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: white;
+  background-color: #123456;
+  text-align: center;
+  margin: auto;
 }
 
 main {
@@ -25,8 +28,7 @@ main {
 
 footer {
   height: 50px;
-  border-top: black 10px solid;
-  border-bottom: black 10px solid;
+  border: black 10px solid;
   width: 100%;
   background-color: #123456;
   position: fixed;
@@ -63,7 +65,7 @@ ul {
   align-items: center;
   width: 100%;
   list-style: none;
-  margin: 1px 0 10px 0;
+  margin: 1px 0 10px;
 }
 
 li {
@@ -92,7 +94,7 @@ a:active {
   text-decoration: underline;
 }
 
-#active-page {
+.active-page {
   background-color: #95b9c7;
   text-decoration: underline;
 }

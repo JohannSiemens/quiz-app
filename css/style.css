@@ -83,6 +83,11 @@ footer {
   top: -15px;
 }
 
+.item__active-page {
+  background-color: #95b9c7;
+  text-decoration: underline;
+}
+
 a:link,
 a:visited {
   background-color: #4863a0;
@@ -95,11 +100,6 @@ a:visited {
 
 a:hover,
 a:active {
-  background-color: #95b9c7;
-  text-decoration: underline;
-}
-
-.item__active-page {
   background-color: #95b9c7;
   text-decoration: underline;
 }

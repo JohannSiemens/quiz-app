@@ -11,16 +11,28 @@
     <header class="header">
       <h1 class="header__h1">Quiz App</h1>
     </header>
-    <main>
-      <section class="card">
+    <main data-js="main">
+      <section class="card tags__tag--hidden" data-js="card-bookmark-hide">
         <h2 class="card__question">Question 1</h2>
         <img
-          class="question__bookmark"
+          class="card__bookmark"
+          data-js="card-bookmark"
           src="svg/bookmark.svg"
           alt="bookmark image"
         />
-        <button type="button" class="card__answer">Show Answer</button>
-        <button type="button" class="card__tag">#tag1</button>
+        <button
+          type="button"
+          class="answer__button"
+          data-js="card-answer-button"
+        >
+          Show Answer
+        </button>
+        <p class="card__answer card__answer--hide" data-js="card-answer">
+          Example Answer
+        </p>
+        <div class="card__tags">
+          <button type="button" class="tags__tag">#tag1</button>
+        </div>
       </section>
       <section class="card">
         <h2 class="card__question">Question 2</h2>
@@ -95,8 +107,10 @@
     </main>
     <footer class="footer">
       <nav class="footer__menu">
-        <a class="menu__item item__active-page" href="index.html">Home</a>
-        <a class="menu__item" href="bookmark.html">Bookmark</a>
+        <a class="menu__item" href="index.html">Home</a>
+        <a class="menu__item item__active-page" href="bookmark.html"
+          >Bookmark</a
+        >
         <a class="menu__item" href="profile.html">Profile</a>
       </nav>
     </footer>

@@ -111,6 +111,7 @@ footer {
   position: absolute;
   right: 20px;
   top: -15px;
+  cursor: pointer;
 }
 
 .card__tags {
@@ -134,6 +135,15 @@ footer {
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
+.tags__tag--hidden {
+  visibility: hidden;
+}
+
+.item__active-page {
+  background-color: #95b9c7;
+  text-decoration: underline;
+}
+
 a:link,
 a:visited {
   background-color: #4863a0;
@@ -146,11 +156,6 @@ a:visited {
 
 a:hover,
 a:active {
-  background-color: #95b9c7;
-  text-decoration: underline;
-}
-
-.item__active-page {
   background-color: #95b9c7;
   text-decoration: underline;
 }

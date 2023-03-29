@@ -3,6 +3,10 @@ const cardAnswerButton = document.querySelector(
   '[data-js="card-answer-button"]'
 );
 const cardAnswerToggle = document.querySelector('[data-js="card-answer"]');
+const cardBookmarkToggle = document.querySelector('[data-js="card-bookmark"]');
+const cardBookmarkHide = document.querySelector(
+  '[data-js="card-bookmark-hide"]'
+);
 const cardAnswerButtonText = "Show Answer";
 
 cardAnswerButton.addEventListener("click", () => {
@@ -13,4 +17,8 @@ cardAnswerButton.addEventListener("click", () => {
     cardAnswerButton.textContent = cardAnswerButtonText;
   }
   console.log("Hide toggle switched");
+});
+
+cardBookmarkToggle.addEventListener("click", () => {
+  cardBookmarkHide.classList.toggle("tags__tag--hidden");
 });

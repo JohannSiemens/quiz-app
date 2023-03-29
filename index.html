@@ -4,23 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="/javascript/script.js" defer></script>
+    <script src="javascript/script.js" defer></script>
     <title>Quiz-App</title>
   </head>
   <body>
     <header class="header">
       <h1 class="header__h1">Quiz App</h1>
     </header>
-    <main>
+    <main data-js="main">
       <section class="card">
         <h2 class="card__question">Question 1</h2>
         <img
-          class="question__bookmark"
+          class="card__bookmark"
           src="svg/bookmark.svg"
           alt="bookmark image"
         />
-        <button type="button" class="card__answer">Show Answer</button>
-        <button type="button" class="card__tag">#tag1</button>
+        <button
+          type="button"
+          class="answer__button"
+          data-js="card-answer-button"
+        >
+          Show Answer
+        </button>
+        <p class="card__answer card__answer--hide" data-js="card-answer">
+          Example Answer
+        </p>
+        <div class="card__tags">
+          <button type="button" class="tags__tag">#tag1</button>
+        </div>
       </section>
       <section class="card">
         <h2 class="card__question">Question 2</h2>
@@ -29,7 +40,8 @@
           src="svg/bookmark.svg"
           alt="bookmark image"
         />
-        <button type="button" class="card__answer">Show Answer</button>
+        <button type="button" class="answer__button">Show Answer</button>
+        <p>Example Answer</p>
         <button type="button" class="card__tag">#tag2</button>
       </section>
       <section class="card">

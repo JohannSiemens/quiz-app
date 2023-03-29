@@ -13,11 +13,13 @@ main {
 
 body {
   margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 footer {
   height: 60px;
-  border: black 5px solid;
+  border-top: black 5px solid;
+  border-bottom: black 5px solid;
   width: 100%;
   background-color: #123456;
   position: fixed;
@@ -28,7 +30,8 @@ footer {
 
 .header__h1 {
   height: 125px;
-  border: black 5px solid;
+  border-top: black 5px solid;
+  border-bottom: black 5px solid;
   width: 100%;
   font-size: 5rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -53,34 +56,81 @@ footer {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.card__answer,
-.card__tag {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
   width: 70%;
   margin: 15px;
   position: relative;
-  text-align: center;
-  height: 200px;
+  height: 250px;
   background-color: #4863a0;
   color: white;
+  margin: 0 0 25px 0;
 }
 
 .card__question {
+  text-align: center;
   font-size: 2.5rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 10px 0;
 }
 
-.question__bookmark {
+.card__answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0 25px 0;
+}
+
+.answer__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  cursor: pointer;
+  height: 30px;
+  width: 150px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  margin: 15px 0;
+}
+
+.card__answer--hide {
+  color: #4863a0;
+}
+
+.card__bookmark {
   height: 50px;
   width: 25px;
   position: absolute;
   right: 20px;
   top: -15px;
+}
+
+.card__tags {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 95%;
+}
+
+.tags__tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  height: 25px;
+  width: 75px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .item__active-page {

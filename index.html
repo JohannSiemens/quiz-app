@@ -4,101 +4,114 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="javascript/script.js" defer></script>
     <title>Quiz-App</title>
   </head>
   <body>
-    <header>
-      <!-- Header nur ab mehreren Elementen, H1 reicht hier -->
-      <h1>Quiz App</h1>
+    <header class="header">
+      <h1 class="header__h1">Quiz App</h1>
     </header>
-    <main>
+    <main data-js="main">
       <section class="card">
-        <h2>Question 1</h2>
+        <h2 class="card__question">Question 1</h2>
         <img
-          class="card-bookmark"
+          class="card__bookmark"
+          data-js="card-bookmark"
           src="svg/bookmark.svg"
           alt="bookmark image"
         />
-        <button type="button">Show Answer</button>
-        <button type="button">#tag1</button>
+        <button
+          type="button"
+          class="answer__button"
+          data-js="card-answer-button"
+        >
+          Show Answer
+        </button>
+        <p class="card__answer card__answer--hide" data-js="card-answer">
+          Example Answer
+        </p>
+        <div class="card__tags">
+          <button type="button" class="tags__tag">#tag1</button>
+        </div>
       </section>
       <section class="card">
-        <h2>Question 2</h2>
+        <h2 class="card__question">Question 2</h2>
         <img
-          class="card-bookmark"
+          class="question__bookmark"
           src="svg/bookmark.svg"
           alt="bookmark image"
         />
-        <button type="button">Show Answer</button>
-        <button type="button">#tag2</button>
+        <button type="button" class="answer__button">Show Answer</button>
+        <p>Example Answer</p>
+        <button type="button" class="card__tag">#tag2</button>
       </section>
       <section class="card">
-        <h2>Question 3</h2>
+        <h2 class="card__question">Question 3</h2>
         <img
-          class="card-bookmark"
+          class="question__bookmark"
           src="svg/bookmark.svg"
           alt="bookmark image"
         />
-        <button type="button">Show Answer</button>
-        <button type="button">#tag3</button>
+        <button type="button" class="card__answer">Show Answer</button>
+        <button type="button" class="card__tag">#tag3</button>
       </section>
       <section class="card">
-        <h2>Question 4</h2>
+        <h2 class="card__question">Question 4</h2>
         <img
-          class="card-bookmark"
+          class="question__bookmark"
           src="svg/bookmark.svg"
           alt="bookmark image"
         />
-        <button type="button">Show Answer</button>
-        <button type="button">#tag4</button>
+        <button type="button" class="card__answer">Show Answer</button>
+        <button type="button" class="card__tag">#tag4</button>
       </section>
       <section class="card">
-        <h2>Question 5</h2>
+        <h2 class="card__question">Question 5</h2>
         <img
-          class="card-bookmark"
+          class="question__bookmark"
           src="svg/bookmark.svg"
           alt="bookmark image"
         />
-        <button type="button">Show Answer</button>
-        <button type="button">#tag4</button>
+        <button type="button" class="card__answer">Show Answer</button>
+        <button type="button" class="card__tag">#tag4</button>
       </section>
       <section class="card">
-        <h2>Question 6</h2>
+        <h2 class="card__question">Question 6</h2>
         <img
-          class="card-bookmark"
+          class="question__bookmark"
           src="svg/bookmark.svg"
           alt="bookmark image"
         />
-        <button type="button">Show Answer</button>
-        <button type="button">#tag4</button>
+        <button type="button" class="card__answer">Show Answer</button>
+        <button type="button" class="card__tag">#tag4</button>
       </section>
       <section class="card">
-        <h2>Question 7</h2>
+        <h2 class="card__question">Question 7</h2>
         <img
-          class="card-bookmark"
+          class="question__bookmark"
           src="svg/bookmark.svg"
           alt="bookmark image"
         />
-        <button type="button">Show Answer</button>
-        <button type="button">#tag4</button>
+        <button type="button" class="card__answer">Show Answer</button>
+        <button type="button" class="card__tag">#tag4</button>
       </section>
       <section class="card">
-        <h2>Question 8</h2>
+        <h2 class="card__question">Question 8</h2>
         <img
-          class="card-bookmark"
+          class="question__bookmark"
           src="svg/bookmark.svg"
           alt="bookmark image"
         />
-        <button type="button">Show Answer</button>
-        <button type="button">#tag4</button>
+        <button type="button" class="card__answer">Show Answer</button>
+        <button type="button" class="card__tag">#tag4</button>
       </section>
     </main>
-    <footer>
-      <ul>
-        <li><a class="active-page" href="index.html">Home</a></li>
-        <li><a href="bookmark.html">Bookmark</a></li>
-        <li><a href="profile.html">Profile</a></li>
-      </ul>
+    <footer class="footer">
+      <nav class="footer__menu">
+        <a class="item__active-page menu__item" href="index.html">Home</a>
+        <a class="menu__item" href="bookmark.html">Bookmark</a>
+        <a class="menu__item" href="profile.html">Profile</a>
+      </nav>
     </footer>
   </body>
 </html>

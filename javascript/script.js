@@ -2,6 +2,9 @@ const mainElement = document.querySelector('[data-js="main"]');
 const cardOneAnswerButton = document.querySelector(
   '[data-js="card-answer-button1"]'
 );
+const cardTwoAnswerButton = document.querySelector(
+  '[data-js="card-answer-button2]'
+);
 const cardOneAnswerToggle = document.querySelector('[data-js="card1-answer"]');
 const cardTwoAnswerToggle = document.querySelector('[data-js="card2-answer"]');
 
@@ -35,6 +38,10 @@ function hideAnswer(button, answer) {
 
 cardOneAnswerButton.addEventListener("click", () =>
   hideAnswer(cardOneAnswerButton, cardOneAnswerToggle)
+);
+
+cardTwoAnswerButton.addEventListener("click", () =>
+  hideAnswer(cardTwoAnswerButton, cardTwoAnswerToggle)
 );
 
 //Die Funktionalität ist grundsätzlich gegeben. Ich konnte auf index.html damit die

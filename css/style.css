@@ -139,8 +139,9 @@ footer {
   visibility: hidden;
 }
 
-.item__active-page {
+.menu__active {
   background-color: #95b9c7;
+  color: black;
   text-decoration: underline;
 }
 

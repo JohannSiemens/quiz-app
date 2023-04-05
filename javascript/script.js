@@ -19,7 +19,7 @@ cardTwoAnswerButton.addEventListener("click", () =>
   hideAnswer(cardTwoAnswerButton, cardTwoAnswerToggle)
 );
 
-const cardTwoBookmark = document.querySelector('[data-js="bookmark-card2]');
+const cardTwoBookmark = document.querySelector('[data-js="bookmark-card2"]');
 
 const cardThreeAnswerButton = document.querySelector(
   '[data-js="card-answer-button3"]'
@@ -32,7 +32,7 @@ cardThreeAnswerButton.addEventListener("click", () =>
   hideAnswer(cardThreeAnswerButton, cardThreeAnswerToggle)
 );
 
-const cardThreeBookmark = document.querySelector('[data-js="bookmark-card3]');
+const cardThreeBookmark = document.querySelector('[data-js="bookmark-card3"]');
 
 const cardFourAnswerButton = document.querySelector(
   '[data-js="card-answer-button4"]'
@@ -43,7 +43,7 @@ cardFourAnswerButton.addEventListener("click", () =>
   hideAnswer(cardFourAnswerButton, cardFourAnswerToggle)
 );
 
-const cardFourBookmark = document.querySelector('[data-js="bookmark-card4]');
+const cardFourBookmark = document.querySelector('[data-js="bookmark-card4"]');
 
 const cardFiveAnswerButton = document.querySelector(
   '[data-js="card-answer-button5"]'
@@ -54,7 +54,7 @@ cardFiveAnswerButton.addEventListener("click", () =>
   hideAnswer(cardFiveAnswerButton, cardFiveAnswerToggle)
 );
 
-const cardFiveBookmark = document.querySelector('[data-js="bookmark-card5]');
+const cardFiveBookmark = document.querySelector('[data-js="bookmark-card5"]');
 
 const cardSixAnswerButton = document.querySelector(
   '[data-js="card-answer-button6"]'
@@ -65,7 +65,7 @@ cardSixAnswerButton.addEventListener("click", () =>
   hideAnswer(cardSixAnswerButton, cardSixAnswerToggle)
 );
 
-const cardSixBookmark = document.querySelector('[data-js="bookmark-card6]');
+const cardSixBookmark = document.querySelector('[data-js="bookmark-card6"]');
 
 const cardSevenAnswerButton = document.querySelector(
   '[data-js="card-answer-button7"]'
@@ -78,7 +78,7 @@ cardSevenAnswerButton.addEventListener("click", () =>
   hideAnswer(cardSevenAnswerButton, cardSevenAnswerToggle)
 );
 
-const cardSevenBookmark = document.querySelector('[data-js="bookmark-card7]');
+const cardSevenBookmark = document.querySelector('[data-js="bookmark-card7"]');
 
 const cardEightAnswerButton = document.querySelector(
   '[data-js="card-answer-button8"]'
@@ -91,7 +91,7 @@ cardEightAnswerButton.addEventListener("click", () =>
   hideAnswer(cardEightAnswerButton, cardEightAnswerToggle)
 );
 
-const cardEightBookmark = document.querySelector('[data-js="bookmark-card8]');
+const cardEightBookmark = document.querySelector('[data-js="bookmark-card8"]');
 
 const cardAnswerButtonText = "Show Answer";
 

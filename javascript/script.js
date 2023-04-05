@@ -5,7 +5,7 @@ const cardOneAnswerButton = document.querySelector(
 const cardOneAnswerToggle = document.querySelector('[data-js="card1-answer"]');
 
 const cardTwoAnswerButton = document.querySelector(
-  '[data-js="card-answer-button2]'
+  '[data-js="card-answer-button2"]'
 );
 const cardTwoAnswerToggle = document.querySelector('[data-js="card2-answer"]');
 

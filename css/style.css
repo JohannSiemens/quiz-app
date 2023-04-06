@@ -134,10 +134,20 @@ form {
 
 .form__input {
   width: 60%;
+  height: 50px;
 }
 
 .form__button {
   margin: 25px 0;
+}
+
+.input__tags {
+  width: 60%;
+}
+
+.input__chars {
+  width: 60%;
+  text-align: right;
 }
 
 .tags__tag {

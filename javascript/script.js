@@ -1,12 +1,28 @@
 const mainQuestions = document.querySelector('[data-js="main-questions"]');
 
 const formSubmit = document.querySelector('[data-js="questions-form"]');
+const questionCharacters = document.querySelector(
+  '[data-js="question-characters"]'
+);
+const answerCharacters = document.querySelector(
+  '[data-js="answer-characters"]'
+);
+const questionCharactersText = document.querySelector(
+  '[data-js="question-characters-text"]'
+);
+const answerCharactersText = document.querySelector(
+  '[data-js="answer-characters-text"]'
+);
 
+//----------------------------------------
+//Form Submit Card Creator
 formSubmit.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
   cardBuilder(mainQuestions, data);
+  questionCharactersText.textContent = "You have 150 characters left";
+  answerCharactersText.textContent = "You have 150 characters left";
   event.target.reset();
   event.target.question.focus();
 });
@@ -18,7 +34,7 @@ function cardBuilder(element, data) {
 
   const buildH2 = document.createElement("h2");
   buildH2.classList.add("card__question");
-  buildH2.textContent = "Question 2";
+  buildH2.textContent = data.question;
   buildSection.append(buildH2);
 
   const buildImage = document.createElement("img");
@@ -35,7 +51,7 @@ function cardBuilder(element, data) {
 
   const buildParagraph = document.createElement("p");
   buildParagraph.classList.add("card__answer", "card__answer--hide");
-  buildParagraph.textContent = "Example Answer";
+  buildParagraph.textContent = data.answer;
   buildSection.append(buildParagraph);
 
   const buildDiv = document.createElement("div");
@@ -45,9 +61,30 @@ function cardBuilder(element, data) {
   const buildDivButton = document.createElement("button");
   buildDivButton.classList.add("tags__tag");
   buildDivButton.setAttribute("type", "button");
-  buildDivButton.textContent = "#tag1";
+  buildDivButton.textContent = data.tags;
   buildDiv.append(buildDivButton);
 }
+
+//----------------------------------------
+//Characters left for Input Field in question.html calculator
+//const maxLengthQuestion = questionCharacters.getAttribute("maxLength");
+//const maxLengthAnswer = answerCharacters.getAttribute("maxLength");
+
+function charactersLeft(element) {
+  return (
+    "You have " +
+    (element.maxLength - element.value.length) +
+    " characters left"
+  );
+}
+
+questionCharacters.addEventListener("input", (event) => {
+  questionCharactersText.textContent = charactersLeft(event.target);
+});
+
+answerCharacters.addEventListener("input", (event) => {
+  answerCharactersText.textContent = charactersLeft(event.target);
+});
 
 //----------------------------------------
 //Card One

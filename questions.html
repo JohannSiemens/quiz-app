@@ -19,16 +19,24 @@
           class="form__input"
           required
           maxlength="150"
+          data-js="question-characters"
         ></textarea>
+        <p class="input__chars" data-js="question-characters-text">
+          You have 150 characters left
+        </p>
         <h2>Your Answer</h2>
         <textarea
           name="answer"
           class="form__input"
           required
           maxlength="150"
+          data-js="answer-characters"
         ></textarea>
+        <p class="input__chars" data-js="answer-characters-text">
+          You have 150 characters left
+        </p>
         <h2>Tag</h2>
-        <input name="tags" class="form__input" type="text" required />
+        <input name="tags" class="input__tags" type="text" required />
         <button
           class="form__button"
           type="submit"

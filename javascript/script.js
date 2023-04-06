@@ -1,8 +1,57 @@
-const mainElement = document.querySelector('[data-js="main"]');
+const mainQuestions = document.querySelector('[data-js="main-questions"]');
+
+const formSubmit = document.querySelector('[data-js="questions-form"]');
+
+formSubmit.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+  cardBuilder(mainQuestions, data);
+  event.target.reset();
+  event.target.question.focus();
+});
+
+function cardBuilder(element, data) {
+  const buildSection = document.createElement("section");
+  buildSection.classList.add("card");
+  element.append(buildSection);
+
+  const buildH2 = document.createElement("h2");
+  buildH2.classList.add("card__question");
+  buildH2.textContent = "Question 2";
+  buildSection.append(buildH2);
+
+  const buildImage = document.createElement("img");
+  buildImage.classList.add("card__bookmark");
+  buildImage.setAttribute("src", "svg/bookmark.svg");
+  buildImage.setAttribute("alt", "bookmark image");
+  buildSection.append(buildImage);
+
+  const buildButton = document.createElement("button");
+  buildButton.classList.add("answer__button");
+  buildButton.setAttribute("type", "button");
+  buildButton.textContent = "Show Answer";
+  buildSection.append(buildButton);
+
+  const buildParagraph = document.createElement("p");
+  buildParagraph.classList.add("card__answer", "card__answer--hide");
+  buildParagraph.textContent = "Example Answer";
+  buildSection.append(buildParagraph);
+
+  const buildDiv = document.createElement("div");
+  buildDiv.classList.add("card__tags");
+  buildSection.append(buildDiv);
+
+  const buildDivButton = document.createElement("button");
+  buildDivButton.classList.add("tags__tag");
+  buildDivButton.setAttribute("type", "button");
+  buildDivButton.textContent = "#tag1";
+  buildDiv.append(buildDivButton);
+}
 
 //----------------------------------------
 //Card One
-
+/*
 const cardOneAnswerButton = document.querySelector(
   '[data-js="card-answer-button1"]'
 );
@@ -16,7 +65,7 @@ const cardOneBookmark = document.querySelector('[data-js="bookmark-card1"]');
 
 cardOneBookmark.addEventListener("click", () =>
   bookmarkImageToggle(cardOneBookmark)
-);
+);*/
 
 /*
 //----------------------------------------

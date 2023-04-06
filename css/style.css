@@ -57,17 +57,6 @@ footer {
   margin: 0 40px;
 }
 
-.menu__itemLong {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 120px;
-  height: 50px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin: 0 40px;
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -135,6 +124,22 @@ footer {
   width: 95%;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.form__input {
+  width: 60%;
+}
+
+.form__button {
+  margin: 25px 0;
+}
+
 .tags__tag {
   display: flex;
   justify-content: center;
@@ -147,10 +152,6 @@ footer {
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
     rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
-}
-
-.tags__tag--hidden {
-  visibility: hidden;
 }
 
 .menu__active {

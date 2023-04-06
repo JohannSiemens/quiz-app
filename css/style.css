@@ -106,12 +106,15 @@ footer {
 }
 
 .card__bookmark {
-  height: 50px;
-  width: 25px;
+  height: 60px;
+  width: 55px;
   position: absolute;
-  right: 20px;
+  right: 15px;
   top: -15px;
   cursor: pointer;
+  background: white;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .card__tags {

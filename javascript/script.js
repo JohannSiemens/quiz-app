@@ -93,6 +93,7 @@ cardEightAnswerButton.addEventListener("click", () =>
 
 const cardEightBookmark = document.querySelector('[data-js="bookmark-card8"]');
 
+// Function to toggle the Answer for the User, after clicking the "Show Answer" Button
 const cardAnswerButtonText = "Show Answer";
 
 function hideAnswer(button, answer) {

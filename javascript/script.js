@@ -1,4 +1,94 @@
-const mainElement = document.querySelector('[data-js="main"]');
+const mainQuestions = document.querySelector('[data-js="main-questions"]');
+
+const formSubmit = document.querySelector('[data-js="questions-form"]');
+const questionCharacters = document.querySelector(
+  '[data-js="question-characters"]'
+);
+const answerCharacters = document.querySelector(
+  '[data-js="answer-characters"]'
+);
+const questionCharactersText = document.querySelector(
+  '[data-js="question-characters-text"]'
+);
+const answerCharactersText = document.querySelector(
+  '[data-js="answer-characters-text"]'
+);
+
+//----------------------------------------
+//Form Submit Card Creator
+formSubmit.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+  cardBuilder(mainQuestions, data);
+  questionCharactersText.textContent = "You have 150 characters left";
+  answerCharactersText.textContent = "You have 150 characters left";
+  event.target.reset();
+  event.target.question.focus();
+});
+
+function cardBuilder(element, data) {
+  const buildSection = document.createElement("section");
+  buildSection.classList.add("card");
+  element.append(buildSection);
+
+  const buildH2 = document.createElement("h2");
+  buildH2.classList.add("card__question");
+  buildH2.textContent = data.question;
+  buildSection.append(buildH2);
+
+  const buildImage = document.createElement("img");
+  buildImage.classList.add("card__bookmark");
+  buildImage.setAttribute("src", "svg/bookmark.svg");
+  buildImage.setAttribute("alt", "bookmark image");
+  buildSection.append(buildImage);
+
+  const buildButton = document.createElement("button");
+  buildButton.classList.add("answer__button");
+  buildButton.setAttribute("type", "button");
+  buildButton.textContent = "Show Answer";
+  buildSection.append(buildButton);
+
+  const buildParagraph = document.createElement("p");
+  buildParagraph.classList.add("card__answer", "card__answer--hide");
+  buildParagraph.textContent = data.answer;
+  buildSection.append(buildParagraph);
+
+  const buildDiv = document.createElement("div");
+  buildDiv.classList.add("card__tags");
+  buildSection.append(buildDiv);
+
+  const buildDivButton = document.createElement("button");
+  buildDivButton.classList.add("tags__tag");
+  buildDivButton.setAttribute("type", "button");
+  buildDivButton.textContent = data.tags;
+  buildDiv.append(buildDivButton);
+}
+
+//----------------------------------------
+//Characters left for Input Field in question.html calculator
+//const maxLengthQuestion = questionCharacters.getAttribute("maxLength");
+//const maxLengthAnswer = answerCharacters.getAttribute("maxLength");
+
+function charactersLeft(element) {
+  return (
+    "You have " +
+    (element.maxLength - element.value.length) +
+    " characters left"
+  );
+}
+
+questionCharacters.addEventListener("input", (event) => {
+  questionCharactersText.textContent = charactersLeft(event.target);
+});
+
+answerCharacters.addEventListener("input", (event) => {
+  answerCharactersText.textContent = charactersLeft(event.target);
+});
+
+//----------------------------------------
+//Card One
+/*
 const cardOneAnswerButton = document.querySelector(
   '[data-js="card-answer-button1"]'
 );
@@ -10,6 +100,14 @@ cardOneAnswerButton.addEventListener("click", () =>
 
 const cardOneBookmark = document.querySelector('[data-js="bookmark-card1"]');
 
+cardOneBookmark.addEventListener("click", () =>
+  bookmarkImageToggle(cardOneBookmark)
+);*/
+
+/*
+//----------------------------------------
+//Card Two
+
 const cardTwoAnswerButton = document.querySelector(
   '[data-js="card-answer-button2"]'
 );
@@ -20,6 +118,9 @@ cardTwoAnswerButton.addEventListener("click", () =>
 );
 
 const cardTwoBookmark = document.querySelector('[data-js="bookmark-card2"]');
+
+//----------------------------------------
+//Card Three
 
 const cardThreeAnswerButton = document.querySelector(
   '[data-js="card-answer-button3"]'
@@ -34,6 +135,9 @@ cardThreeAnswerButton.addEventListener("click", () =>
 
 const cardThreeBookmark = document.querySelector('[data-js="bookmark-card3"]');
 
+//----------------------------------------
+//Card Four
+
 const cardFourAnswerButton = document.querySelector(
   '[data-js="card-answer-button4"]'
 );
@@ -44,6 +148,9 @@ cardFourAnswerButton.addEventListener("click", () =>
 );
 
 const cardFourBookmark = document.querySelector('[data-js="bookmark-card4"]');
+
+//----------------------------------------
+//Card Five
 
 const cardFiveAnswerButton = document.querySelector(
   '[data-js="card-answer-button5"]'
@@ -56,6 +163,9 @@ cardFiveAnswerButton.addEventListener("click", () =>
 
 const cardFiveBookmark = document.querySelector('[data-js="bookmark-card5"]');
 
+//----------------------------------------
+//Card Six
+
 const cardSixAnswerButton = document.querySelector(
   '[data-js="card-answer-button6"]'
 );
@@ -66,6 +176,9 @@ cardSixAnswerButton.addEventListener("click", () =>
 );
 
 const cardSixBookmark = document.querySelector('[data-js="bookmark-card6"]');
+
+//----------------------------------------
+//Card Seven
 
 const cardSevenAnswerButton = document.querySelector(
   '[data-js="card-answer-button7"]'
@@ -80,6 +193,9 @@ cardSevenAnswerButton.addEventListener("click", () =>
 
 const cardSevenBookmark = document.querySelector('[data-js="bookmark-card7"]');
 
+//----------------------------------------
+//Card Eight
+
 const cardEightAnswerButton = document.querySelector(
   '[data-js="card-answer-button8"]'
 );
@@ -92,7 +208,9 @@ cardEightAnswerButton.addEventListener("click", () =>
 );
 
 const cardEightBookmark = document.querySelector('[data-js="bookmark-card8"]');
-
+*/
+//----------------------------------------
+// Function to toggle the Answer for the User, after clicking the "Show Answer" Button
 const cardAnswerButtonText = "Show Answer";
 
 function hideAnswer(button, answer) {
@@ -103,4 +221,18 @@ function hideAnswer(button, answer) {
     button.textContent = cardAnswerButtonText;
   }
   console.log("Hide toggle switched");
+}
+
+//Function to toggle the Bookmark Icon for every card
+let bookmarked = false;
+
+function bookmarkImageToggle(bookmark) {
+  if (bookmarked) {
+    console.log("remove");
+    bookmark.src = "svg/bookmark.svg";
+  } else {
+    console.log("add");
+    bookmark.src = "svg/bookmark_added.svg";
+  }
+  bookmarked = !bookmarked;
 }
